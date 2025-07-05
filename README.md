@@ -83,7 +83,9 @@ http://localhost/seu-projeto/usuario/listar
 
 ## 🔜 Próximos passos
 
-- [x] Módulo 02: Sistema de login/logout com JWT
+- [x] Módulo 01: Estrutura básica do MVC e API
+- [] Módulo 02: Estabelecer conexão com o Banco de Dados MySQL, usando o PDO
+- [] Módulo 03: Sistema de login/logout com JWT
 
 ---
 
