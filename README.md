@@ -33,16 +33,17 @@ Criar uma API robusta, escalável e com boas práticas, começando com funcional
 │   ├── Configs/
 │   │   └── Constantes.php
 │   ├── Controllers/
+│   │   └── Controller.php
 │   │   └── HomeController.php
 │   ├── Core/
 │   │   └── Router.php
 │   └── Helpers/
 │       └── RespostaHTTP.php
-├── public/
-│   └── .htaccess (opcional, se separado)
-├── vendor/
+├── .gitignore
+├── .htaccess
 ├── composer.json
 └── index.php
+├── README.md
 ```
 
 ---
@@ -82,11 +83,7 @@ http://localhost/seu-projeto/usuario/listar
 
 ## 🔜 Próximos passos
 
-- [ ] Módulo 02: Sistema de login/logout com JWT
-- [ ] Módulo 03: Cadastro de clientes
-- [ ] Módulo 04: Tela de agendamento
-- [ ] Módulo 05: Painel do administrador
-- [ ] Documentação via Swagger ou Postman
+- [x] Módulo 02: Sistema de login/logout com JWT
 
 ---
 
@@ -95,7 +92,3 @@ http://localhost/seu-projeto/usuario/listar
 **Felipe Santos das Neves**
 
 ---
-
-## 📝 Licença
-
-Projeto em desenvolvimento. Licenciamento e termos comerciais serão definidos em breve.
