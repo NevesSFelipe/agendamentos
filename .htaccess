@@ -1,19 +1,6 @@
-# Arquivo: .htaccess
+RewriteEngine On
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    # Define a base se seu projeto estiver em um subdiretório
-    # Ex: RewriteBase /nomedapasta/
-    RewriteBase /
-
-    # Ignora arquivos e diretórios reais
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-
-    # Redireciona tudo para index.php
-    RewriteRule ^ index.php [QSA,L]
-</IfModule>
-
-# Impede listagem de diretórios
-Options -Indexes
+# Se não for arquivo nem diretório, redireciona para index.php com a URL como parâmetro
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

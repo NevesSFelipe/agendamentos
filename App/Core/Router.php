@@ -18,35 +18,33 @@ class Router {
 
     public function handle()
     {
-        if ( empty($this->url) === true ) {
+        $this->controller = CONTROLLER_DEFAULT;
+        $this->metodo = METODO_DEFAULT;
 
-            $this->controller = "HomeController";
-            $this->metodo = "index";
-
-        }
-        
         if ( empty($this->url) === false ) {
          
             $segmentos = explode("/", $this->url);
 
-            if ( count($segmentos) === 1) { $this->controller = ucfirst($segmentos[0]) . "Controller"; }
+            if ( count($segmentos) === 1) { $this->controller = $segmentos[0]; }
 
             if ( count($segmentos) === 2) { 
                 
-                $this->controller = ucfirst($segmentos[0]) . "Controller";
+                $this->controller = $segmentos[0];
                 $this->metodo = $segmentos[1];
 
             }
 
             if ( count($segmentos) > 2) { 
 
-                $this->controller = ucfirst($segmentos[0]) . "Controller";
+                $this->controller = $segmentos[0];
                 $this->metodo = $segmentos[1];
                 $this->parametros = array_slice($segmentos, 2);
 
             }
 
         }
+
+        $this->controller = ucfirst($this->controller) . "Controller";
 
         print $this->chamarEndPoint();
 
